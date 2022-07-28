@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/global.css" />
+        <link rel="stylesheet" href="./css/index.css" />
+        <script src="index.js" defer></script>
+    </head>
+    <body>
+        <div class="settings-container">
+            <div data-label="Monitor Size" class="select-wrapper">
+                <select class="settings-input" id="monitor-size" required></select>
+            </div>
+            <div data-label="Face Distance" class="select-wrapper">
+                <select class="settings-input" id="face-distance" required></select>
+            </div>
+            <div data-label="Camera Position" class="select-wrapper">
+                <select class="settings-input" id="camera-position" required>
+                    <option value="top" selected>Top</option>
+                    <option value="bottom">Bottom</option>
+                </select>
+            </div>
+            <div class="layouts-container">
+                <a href="layouts/layout1/index.html" class="layout-link">Layout 1</a>
+                <a href="layouts/layout2/index.html" class="layout-link">Layout 2</a>
+            </div>
+        </div>
+    </body>
+</html>

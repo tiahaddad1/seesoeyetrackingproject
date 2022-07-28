@@ -1,0 +1,19 @@
+{
+    "name": "seeso-web-app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "^16.0.1",
+        "express": "^4.18.1",
+        "parcel-bundler": "^1.12.5",
+        "regenerator-runtime": "^0.13.9",
+        "seeso": "^0.1.10"
+    }
+}
