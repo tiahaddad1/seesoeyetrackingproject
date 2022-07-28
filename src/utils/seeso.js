@@ -22,8 +22,9 @@ export async function initiateSeeso(onGaze) {
             seeSo.setMonitorSize(Number(SETTINGS.monitorSize));
             seeSo.setFaceDistance(Number(SETTINGS.faceDistance));
             seeSo.setCameraPosition(window.outerWidth / 2, SETTINGS.cameraPosition == 'top');
+            const trackerDot = createDot();
             seeSo.startTracking(gazeInfo => {
-                createDot(gazeInfo);
+                updateDot(trackerDot, gazeInfo);
                 onGaze(gazeInfo);
             }, onDebug);
         },
@@ -32,12 +33,16 @@ export async function initiateSeeso(onGaze) {
     );
 }
 
-function createDot(gazeInfo) {
+function createDot() {
     const dotEl = document.createElement('div');
     dotEl.classList.add('dot');
-    dotEl.setProperty('--top', gazeInfo.y);
-    dotEl.setProperty('--left', gazeInfo.x);
     document.body.appendChild(dotEl);
+    return dotEl;
+}
+
+function updateDot(dot, gazeInfo) {
+    dot.style.setProperty('--top', (gazeInfo.y / window.innerHeight) * 100);
+    dot.style.setProperty('--left', (gazeInfo.x / window.innerWidth) * 100);
 }
 
 function onDebug() {
