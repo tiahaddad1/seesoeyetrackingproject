@@ -1,14 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link rel="stylesheet" href="../../css/global.css" />
-    </head>
-    <body>
-        <!-- hi ape i had to add this html file because the code wouldnt compile otherwise. you can replace it with your own or just put the body tag content in here -->
-        <!-- just make sure to import the global css file like in line 8 -->
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="./layout2.css" />
+    <script src="./../index.js" defer></script>
+  </head>
+  <body data-layout-Id="2">
+    <nav class="sidebar">
+      <button id="scroll-left" class="sideBar-button">
+        <img
+          src="https://img.icons8.com/color/344/circled-down-2--v1.png"
+          width="55px"
+          height="55px"
+          crossorigin="anonymous"
+        />
+      </button>
+      <button id="record-btn" class="sideBar-button">
+        <img
+          src="https://img.icons8.com/color/344/play--v1.png"
+          width="55px"
+          height="55px"
+          crossorigin="anonymous"
+        />
+      </button>
+      <button id="pause-btn" class="sideBar-button">
+        <img
+          src="https://img.icons8.com/color/344/pause.png"
+          width="55px"
+          height="55px"
+          crossorigin="anonymous"
+        />
+      </button>
+      <button id="download-btn" class="sideBar-button">
+        <img
+          src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAxNzIgMTcyIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtZGFzaGFycmF5PSIiIHN0cm9rZS1kYXNob2Zmc2V0PSIwIiBmb250LWZhbWlseT0ibm9uZSIgZm9udC13ZWlnaHQ9Im5vbmUiIGZvbnQtc2l6ZT0ibm9uZSIgdGV4dC1hbmNob3I9Im5vbmUiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTogbm9ybWFsIj48cGF0aCBkPSJNMCwxNzJ2LTE3MmgxNzJ2MTcyeiIgZmlsbD0ibm9uZSI+PC9wYXRoPjxnIGZpbGw9IiMzNDk4ZGIiPjxwYXRoIGQ9Ik03OC44MzMzMywxNC4zMzMzM2MtMy45NTYsMCAtNy4xNjY2NywzLjIxMDY3IC03LjE2NjY3LDcuMTY2Njd2NTcuMzMzMzNoLTI1LjA4MzMzYy0xLjk3OTAyLDAgLTMuNTgzMzMsMS42MDQzMSAtMy41ODMzMywzLjU4MzMzYzAuMDAwMTQsMC45NTAzMSAwLjM3Nzc3LDEuODYxNjQgMS4wNDk4LDIuNTMzNTNjMC4wNzE2MiwwLjA3MzE1IDAuMTQ2MzQsMC4xNDMyIDAuMjIzOTYsMC4yMDk5NWwzNi41ODkxOSwzNC41MDM1OWwwLjIzNzk1LDAuMjIzOTZjMS4zMjY1NiwxLjI0NzM3IDMuMDc4MTksMS45NDMwMiA0Ljg5OTA5LDEuOTQ1NjRjMS44MjA5LC0wLjAwMjYxIDMuNTcyNTMsLTAuNjk4MjYgNC44OTkwOSwtMS45NDU2NGwwLjA5Nzk4LC0wLjA4Mzk5YzAuMDIzNTQsLTAuMDI3ODIgMC4wNDY4NywtMC4wNTU4MSAwLjA2OTk4LC0wLjA4Mzk5bDM2LjU3NTIsLTM0LjQ4OTU4YzAuMDcyNTgsLTAuMDYyNDkgMC4xNDI2MiwtMC4xMjc4NiAwLjIwOTk2LC0wLjE5NTk3bDAuMDU1OTksLTAuMDQxOTljMC4wMTQxMSwtMC4wMTM4OCAwLjAyODExLC0wLjAyNzg4IDAuMDQyLC0wLjA0MTk5YzAuNjcyMDQsLTAuNjcxOSAxLjA0OTY2LC0xLjU4MzIzIDEuMDQ5OCwtMi41MzM1M2MwLC0xLjk3OTAyIC0xLjYwNDMxLC0zLjU4MzMzIC0zLjU4MzMzLC0zLjU4MzMzaC0yNS4wODMzM3YtNTcuMzMzMzNjMCwtMy45NTYgLTMuMjEwNjcsLTcuMTY2NjcgLTcuMTY2NjcsLTcuMTY2NjdoLTcuMTY2Njd6TTIxLjUsMTQzLjMzMzMzYy0yLjU4NDU2LC0wLjAzNjU1IC00Ljk4ODU4LDEuMzIxMzYgLTYuMjkxNTMsMy41NTM3NmMtMS4zMDI5NSwyLjIzMjQgLTEuMzAyOTUsNC45OTM0MiAwLDcuMjI1ODJjMS4zMDI5NSwyLjIzMjQgMy43MDY5NywzLjU5MDMxIDYuMjkxNTMsMy41NTM3NmgxMjljMi41ODQ1NiwwLjAzNjU1IDQuOTg4NTgsLTEuMzIxMzYgNi4yOTE1MywtMy41NTM3NmMxLjMwMjk1LC0yLjIzMjQgMS4zMDI5NSwtNC45OTM0MiAwLC03LjIyNTgyYy0xLjMwMjk1LC0yLjIzMjQgLTMuNzA2OTcsLTMuNTkwMzEgLTYuMjkxNTMsLTMuNTUzNzZ6Ij48L3BhdGg+PC9nPjwvZz48L3N2Zz4="
+          width="45px"
+          height="45px"
+          crossorigin="anonymous"
+        />
+      </button>
+      <button id="scroll-right" class="sideBar-button">
+        <img
+          src="https://img.icons8.com/color/344/circled-down-2--v1.png"
+          width="55px"
+          height="55px"
+          crossorigin="anonymous"
+        />
+      </button>
+    </nav>
+    <nav class="btns-navbar">
+      <div class="all-btns">
+        <button id="scroll-up" class="sideBar-button">
+          <img
+            src="https://img.icons8.com/color/344/circled-down-2--v1.png"
+            width="55px"
+            height="55px"
+            crossorigin="anonymous"
+          />
+        </button>
+        <button class="button" id="b1">
+          Button 1
+        </button>
+        <button class="button" id="b2">Button 2</button>
+        <button class="button" id="b3">Button 3</button>
+        <button id="scroll-down" class="sideBar-button">
+          <img
+            src="https://img.icons8.com/color/344/circled-down-2--v1.png"
+            width="55px"
+            height="55px"
+            crossorigin="anonymous"
+          />
+        </button>
+        <a id="download-graph">Pathing Graph</a>
+      </div>
+    </nav>
+
+    <div class="content-wrapper">
+      <nav class="layout-nav">
+        <a href="./../../index.html"
+          ><img
+            class="logo"
+            src="https://assets.bizclikmedia.net/original/f4d1bc64a1b5980b61eec8e62d38c4d9:cee19032229315e3062fd12b35dd0bdd/technology-magazine-dark-logo.png"
+            crossorigin="anonymous"
+          />
+        </a>
+      </nav>
+
+      <h2 class="sub-heading">This Month's Picks</h2>
+      <div class="wrap-products">
+        <div class="products"></div>
+      </div>
+      <div class="recording"></div>
+      <canvas id="canvas-drawing" style="display:none"></canvas>
+    </div>
+  </body>
 </html>

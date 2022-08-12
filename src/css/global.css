@@ -1,25 +1,62 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 a {
-    display: inline-block;
+  display: inline-block;
 }
 
 .dot {
-    position: fixed;
-    top: calc(var(--top, -100) * 1%);
-    left: calc(var(--left, -100) * 1%);
-    height: 20px;
-    width: 20px;
-    background-color: red;
-    border-radius: 100%;
-    backdrop-filter: blur(20em);
+  position: fixed;
+  top: calc(var(--top, -100) * 1%);
+  left: calc(var(--left, -100) * 1%);
+  height: 20px;
+  width: 20px;
+  background-color: purple;
+  border-radius: 100%;
+  backdrop-filter: blur(20em);
+}
+.recording {
+  position: fixed;
+  right: 2vw;
+  top: 2vw;
+  height: 15px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  background-color: red;
+  opacity: 0;
+}
+
+.recording.start {
+  animation: blink 1.25s infinite linear;
+}
+
+@keyframes blink {
+  to {
+    opacity: 1;
+  }
+}
+
+.recording.stop {
+  border-radius: 0;
+  opacity: 1;
+}
+
+#download-graph {
+  color: aliceblue;
+  text-decoration: underline;
+  font-size: 15px;
+  width: 55px;
+  margin-bottom: -50px;
+  display: none;
+  margin-top: 40px;
 }
